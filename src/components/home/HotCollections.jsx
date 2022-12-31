@@ -49,6 +49,8 @@ const HotCollections = () => {
     }, 1000);
   }, []);
 
+  
+
   return (
     <section id="section-collections" className="no-bottom">
       <div className="container">
@@ -82,7 +84,7 @@ const HotCollections = () => {
                   <div className=" " key={index}>
                     <div className="nft_coll">
                       <div className="nft_wrap ">
-                        <Link to={`/items-details/${post.nftId}`}>
+                      <Link to={`/item-details/${post.nftId}`}>
                           <img
                             src={post.nftImage}
                             className="lazy img-fluid"
