@@ -8,7 +8,8 @@ const AuthorItems = ({post, nftCollection, loading}) => {
   return (
     <div className="de_tab_content">
       <div className="tab-1">
-        <div className="row">
+        <div className="row" 
+        >
           {
             loading ? 
                  ( <Skeleton itemNo={8} className={'col-lg-3 col-md-6 col-sm-6 col-xs-12'}/> ): nftCollection?.map((nft, index) => (
