@@ -65,12 +65,11 @@ const ExploreItems = () => {
           <option value="likes_high_to_low">Most liked</option>
         </select>
       </div>
-      {loading ? (
-        <Skeleton
-          itemNo={8}
-          className={"d-item col-lg-3 col-md-6 col-sm-6 col-xs-12"}
-        />
-      ) : (
+      {loading ? new Array(8).fill(0).map((_, index) => (
+        <div key={index} className="d-item col-lg-3 col-md-6 col-sm-6 col-xs-12" style={{ display: "block", backgroundSize: "cover" }}>
+          <Skeleton width={"100%"} height={400} borderRadius={12}/>
+        </div>
+      )) : (
         initialPosts.map((post, index) => (
           <div
             key={index}
